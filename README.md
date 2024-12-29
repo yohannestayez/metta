@@ -1,4 +1,14 @@
-# meTTa_Training
+## working with MeTTa
+### Overview
+This script facilitates processing and analyzing biological data using the MeTTa library. It focuses on loading datasets, extracting relationships between genes, transcripts, and proteins, and serializing the results into a structured JSON-compatible format.
+
+### Features
+- **Dataset Loader**: Recursively loads .metta files from a specified directory into a working space.
+- **Gene-Transcript Mapping**: Fetches transcripts associated with a specified gene.
+- **Transcript-Protein Mapping**: Determines the proteins derived from specific transcripts.
+- **Serializer**: Converts raw MeTTa results into a JSON-serializable format for further analysis.
+
+
 
 **Set Up:**
 
@@ -21,13 +31,6 @@ Method 2:
 docker build -t metta-app .
 docker run -it --rm -v ${PWD}:/app metta-app
 ```
-
-3. **Links**:
-   
-1) https://metta-lang.dev/docs/learn/tutorials/eval_intro/main_concepts.html
-2) https://metta-lang.dev/docs/learn/tutorials/ground_up/query_knowledge.html
-3) https://metta-lang.dev/docs/learn/tutorials/python_use/intro.html
-4) https://github.com/trueagi-io/hyperon-experimental/blob/main/python/hyperon/atoms.py#L10
 
 
 
