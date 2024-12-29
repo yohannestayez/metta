@@ -1,7 +1,6 @@
 from hyperon import MeTTa, SymbolAtom, ExpressionAtom, GroundedAtom
 import os
 import glob
-import json
 import re
 
 metta = MeTTa()
