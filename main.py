@@ -46,13 +46,16 @@ def get_transcript(node):
 def get_protein(node):
     #TODO Implement the logic to fetch the protein
     protein = metta.run(f'''
-            !(unify &space
-                    (transcribed_to (gene {node[0].split()[-1]}) $x)
-                    (translates_to $x ($p))
-                    Fail
-                    )
-    '''
-    ) 
+                        
+            (= (transcript $y) (match &space (transcribed_to (gene {node[0].split()[-1]}) $x) $x))
+            !(unify &space 
+                (translates_to (transcript $y) $p)
+                (translates_to (transcript $y) $p)
+                Fail
+                )
+            
+            '''
+    )
     return protein
 
 
